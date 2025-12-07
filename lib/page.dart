@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'page4.dart';
 
 class Aceuil extends StatelessWidget {
   const Aceuil({super.key});
@@ -6,14 +9,13 @@ class Aceuil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("data"), backgroundColor: Colors.blue),
-      body: Container(
-        color: Colors.red,
-        width: 100,
-        height: 100,
-        child: Text(
-          "Mon app",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          child: ElevatedButton(
+            onPressed: () => Get.to(Page4()),
+            child: Text("Vers page4"),
+          ),
         ),
       ),
     );
